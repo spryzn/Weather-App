@@ -17,10 +17,14 @@ async function getWeather() {
       `;
       document.getElementById("weatherResult").innerHTML = result;
     } else {
-      document.getElementById("weatherResult").innerHTML = `<p>City not found</p>`;
+      document.getElementById(
+        "weatherResult"
+      ).innerHTML = `<p>City not found</p>`;
     }
   } catch (error) {
     console.error("Error:", error);
-    document.getElementById("weatherResult").innerHTML = `<p>Error retrieving weather data</p>`;
+    document.getElementById(
+      "weatherResult"
+    ).innerHTML = `<p>Error retrieving weather data</p>`;
   }
 }
