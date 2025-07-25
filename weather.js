@@ -1,40 +1,9 @@
-// async function getWeather() {
-//   const city = document.getElementById("cityInput").value;
-//   const apiKey = "e6c55e7e30ef75592288ccd9721b233f"; // Replace with your OpenWeatherMap API key
-//   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
-//   try {
-//     const response = await fetch(url);
-//     const data = await response.json();
-
-//     if (data.cod === 200) {
-//       const result = `
-//         <h2>${data.name}</h2>
-//         <p>${data.weather[0].description}</p>
-//         <p>🌡️ Temp: ${data.main.temp}°C</p>
-//         <p>💧 Humidity: ${data.main.humidity}%</p>
-//         <p>🌬️ Wind: ${data.wind.speed} m/s</p>
-//       `;
-//       document.getElementById("weatherResult").innerHTML = result;
-//     } else {
-//       document.getElementById(
-//         "weatherResult"
-//       ).innerHTML = `<p>City not found</p>`;
-//     }
-//   } catch (error) {
-//     console.error("Error:", error);
-//     document.getElementById(
-//       "weatherResult"
-//     ).innerHTML = `<p>Error retrieving weather data</p>`;
-//   }
-// }
-
 const cityInput = document.querySelector(".city-input");
 const searchButton = document.querySelector(".search-btn");
 const locationButton = document.querySelector(".location-btn");
 const currentWeatherDiv = document.querySelector(".current-weather");
 const weatherCardsDiv = document.querySelector(".weather-cards");
-const API_KEY = "e6c55e7e30ef75592288ccd9721b233f"; // API key for OpenWeatherMap API
+const API_KEY = "e6c55e7e30ef75592288ccd9721b233f"; 
 const createWeatherCard = (cityName, weatherItem, index) => {
     if(index === 0) { // HTML for the main weather card
         return `<div class="details">
